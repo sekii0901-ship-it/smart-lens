@@ -39,7 +39,7 @@ target = img_file if img_file else text_query
 
 if target and api_key:
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel('gemini-2.0-flash')
+    model = genai.GenerativeModel('gemini-1.5-flash')
     
     with st.spinner("リアルタイム調査中..."):
         prompt = "あなたは価格比較の専門家です。この商品の正式名称を特定し、主要10店舗前後の現在の送料込み価格と、今買うべきかの判定を日本語で教えてください。最後に、LINE共有用の短い1行要約も作ってください。"
